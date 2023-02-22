@@ -1,0 +1,4 @@
+Flight ID,Arrival,Departure,Success
+1,02:00,00:00,success
+2,02:10,01:00,success
+3,04:00,00:13,fail
