@@ -1,0 +1,31 @@
+[
+	{
+		"url": "http://localhost:5000/add-flights",
+		"data": {
+			"flights": [
+				{
+					"flight_id": "zA",
+					"arrival": "10:10",
+					"departure": "09:10"
+				},
+				{
+					"flight_id": "BB",
+					"arrival": "10:15",
+					"departure": "09:15"
+				}
+			]
+		}
+	},
+	{
+		"url": "http://localhost:5000/get-flights-list/"
+	},
+	{
+		"url": "http://localhost:5000/get-flight-data/<flight_id>",
+		"resp": {
+			"arrival": "10:00",
+			"departure": "09:10",
+			"flight_id": "123",
+			"success": "success"
+		}
+	}
+]
