@@ -22,7 +22,7 @@ class FlightData(object):
         departure = utils.convert_str_to_time(self.departure)
         arrival = utils.convert_str_to_time(self.arrival)
         diff = utils.subtract_times(departure, arrival)
-        return diff <= consts.MAX_FLIGHT_DURATION
+        return diff <= consts.MAX_FLIGHT_DURATION_IN_MINUTES
 
     def get_json_repr(self):
         return json.dumps(self.__dict__)
@@ -55,7 +55,6 @@ class FlightData(object):
                 current_success_count += 1
             else:
                 flight.success = consts.FlightStatus.FAIL.value
-
 
 
 def generate_flight_data_from_json(flights, ignore_success=False) -> List[FlightData]:

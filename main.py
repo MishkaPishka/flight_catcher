@@ -55,11 +55,16 @@ def get_flights_list():
 
 
 if __name__ == '__main__':
-    db_name = ''
-    # app.config.update(
-    #     TESTING=True,
-    # )
+    import sys
+
+    db_name = consts.DEFAULT_CSV_FILENAME
+
+    # if we get csv path from input
+    if len(sys.argv) == 2:
+        # Arguments passed
+        db_name = sys.argv[1]
+
     app = init_db(app, db_name)
 
-    app.run(debug=True, use_reloader=False)
+    app.run(host='0.0.0.0', debug=True, use_reloader=False)
 #
