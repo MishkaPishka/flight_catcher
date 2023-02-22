@@ -41,12 +41,3 @@ class CsvParser:
         df = pd.DataFrame(columns=consts.CSV_HEADERS)
         df.to_csv(self.csv_filename, index=False)
 
-
-if __name__ == '__main__':
-    CsvParser('s.csv')
-    exit(0)
-    csv_parser = CsvParser('db.csv')
-    dict_ = csv_parser.csv_to_list()
-    for row in dict_:
-        print(row)
-    # print(list(dict_))

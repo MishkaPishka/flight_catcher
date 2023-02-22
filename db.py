@@ -63,6 +63,3 @@ class DataManager(object):
             # if yes - calculate success values and update db
             self.update_success_values_and_insert_flights([])
 
-
-if __name__ == '__main__':
-    x = DataManager('s.csv')

@@ -57,21 +57,6 @@ class FlightData(object):
                 flight.success = consts.FlightStatus.FAIL.value
 
 
-if __name__ == '__main__':
-    s = [1, 2, 3, 4]
-    x = FlightData(*s)
-    x = FlightData.from_list({'flight_id': 1, 'departure': 2, 'arrival': '19:00', 'success': 4})
-    l = [FlightData.from_dict({'flight_id': 1, 'departure': 2, 'arrival': '19:00', 'success': 4}),
-         FlightData.from_dict({'flight_id': 1, 'departure': 2, 'arrival': '12:00', 'success': 4}),
-         FlightData.from_dict({'flight_id': 1, 'departure': 2, 'arrival': '11:56', 'success': 4})]
-    a = FlightData.sort_flight_list_by_arrival(l)
-
-    exit(0)
-    d = {'flight_id': 1, 'departure': 2, 'arrival': 3, 'success': 4}
-    x = FlightData.from_dict(d)
-    print(x.get_json_repr())
-    print(x)
-
 
 def generate_flight_data_from_json(flights, ignore_success=False) -> List[FlightData]:
     flights_list = []
